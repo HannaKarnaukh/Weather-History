@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WHStartPageViewController" customModule="Weather_History" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="Smw-Rq-VBq">
+                                <rect key="frame" x="40" y="227" width="295" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Smw-Rq-VBq" secondAttribute="height" multiplier="1:1" priority="750" id="9NP-mp-ZOD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7T-jj-fBC">
+                                <rect key="frame" x="151" y="586" width="73" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="WlG-sr-m2I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="28"/>
+                                <state key="normal" title="Next...">
+                                    <color key="titleColor" red="0.96470588235294119" green="0.74509803921568629" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GA9-hS-OUP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfX-Vg-gyy">
+                                <rect key="frame" x="108" y="85" width="159" height="37"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="34"/>
+                                <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather's History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOA-WK-8Wg">
+                                <rect key="frame" x="55.5" y="127" width="264" height="45"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="34"/>
+                                <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lfX-Vg-gyy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="0KL-bW-8wH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k7T-jj-fBC" secondAttribute="bottom" constant="35" id="2T8-sH-jxk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Smw-Rq-VBq" secondAttribute="trailing" constant="40" id="9ps-3Q-mNE"/>
+                            <constraint firstItem="Smw-Rq-VBq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Bpw-du-1Dy"/>
+                            <constraint firstItem="Smw-Rq-VBq" firstAttribute="top" secondItem="SOA-WK-8Wg" secondAttribute="bottom" priority="750" constant="55" id="INt-cd-4M0"/>
+                            <constraint firstItem="k7T-jj-fBC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RdT-dr-80E"/>
+                            <constraint firstItem="Smw-Rq-VBq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T3M-gT-339"/>
+                            <constraint firstItem="Smw-Rq-VBq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bnk-LQ-0bx"/>
+                            <constraint firstItem="k7T-jj-fBC" firstAttribute="top" secondItem="Smw-Rq-VBq" secondAttribute="bottom" priority="250" constant="25" id="dIZ-xd-MS3"/>
+                            <constraint firstItem="lfX-Vg-gyy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hBp-GV-4uW"/>
+                            <constraint firstItem="SOA-WK-8Wg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mPn-UP-bnJ"/>
+                            <constraint firstItem="SOA-WK-8Wg" firstAttribute="top" secondItem="lfX-Vg-gyy" secondAttribute="bottom" constant="5" id="sya-TH-hNR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="images" width="225" height="225"/>
+    </resources>
 </document>

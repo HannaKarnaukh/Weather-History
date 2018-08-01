@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WHInfoViewController" customModule="Weather_History" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74T-Zk-Ekf">
+                    <rect key="frame" x="15" y="35" width="345" height="203.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Estimated data is marked with a ">
+                            <attributes>
+                                <color key="NSColor" red="0.36862745099999999" green="0.46666666670000001" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="*">
+                            <attributes>
+                                <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content"> after the value.
+   
+Missing data (more than 2 days missing in month) is marked by  </string>
+                            <attributes>
+                                <color key="NSColor" red="0.36862745099999999" green="0.46666666670000001" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="---">
+                            <attributes>
+                                <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">.
+  
+Sunshine data taken from an automatic Kipp &amp; Zonen sensor marked with a </string>
+                            <attributes>
+                                <color key="NSColor" red="0.36862745099999999" green="0.46666666670000001" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content="# ">
+                            <attributes>
+                                <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <string key="content">, otherwise sunshine data taken from a Campbell Stokes recorder.
+</string>
+                            <attributes>
+                                <color key="NSColor" red="0.36862745099999999" green="0.46666666670000001" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="74T-Zk-Ekf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="IlJ-Xb-7xt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="74T-Zk-Ekf" secondAttribute="trailing" constant="15" id="YXF-8a-TgZ"/>
+                <constraint firstItem="74T-Zk-Ekf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="z7x-sa-TYs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
