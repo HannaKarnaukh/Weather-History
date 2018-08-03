@@ -2,7 +2,6 @@
 ![001-mountain-1](https://user-images.githubusercontent.com/35662703/43547470-01bc74f0-95e4-11e8-9a83-682c3eaf5735.png)
 
 History of weather trends from a different Meteorological Weather Stations.
-Full weather data you can find here https://data.gov.uk/dataset/historic-monthly-meteorological-station-data
 
 You can select location, year and month to browse through the weather.
 
